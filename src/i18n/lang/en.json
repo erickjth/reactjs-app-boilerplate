@@ -1,0 +1,5 @@
+{
+	"Header": "Application Header",
+	"DefaultError": "Oops! Something went wrong!",
+	"DefaultSuccess": "Success"
+}

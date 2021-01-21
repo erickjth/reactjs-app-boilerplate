@@ -1,0 +1,17 @@
+[
+	{
+		"id": 1,
+		"first_name": "John",
+		"last_name": "Doe",
+		"email": "user@test.com",
+		"mobile_phone": {
+			"number": "8005555555",
+			"region_code": "US"
+		},
+		"avatar": "https://randomuser.me/api/portraits/men/22.jpg",
+		"password": "1234",
+		"jwt": {
+			"token": "user"
+		}
+	}
+]
