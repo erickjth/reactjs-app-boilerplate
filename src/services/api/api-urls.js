@@ -4,8 +4,8 @@
  */
 export const urls = {
 	auth: {
-		postJwtCreate: {
-			url: '/auth/jwt/create',
+		postLogin: {
+			url: '/auth/login',
 			/**
 			 * Takes a set of user credentials and returns a sliding JSON web token to
 			 * prove the authentication of those credentials.
@@ -14,8 +14,8 @@ export const urls = {
 			 * Returns [201, { email: string, password: string }]
 			 */
 		},
-		postJwtVerify: {
-			url: '/auth/jwt/verify',
+		postVerify: {
+			url: '/auth/verify',
 			/**
 			 * Takes a token and indicates if it is valid. This view provides no
 			 * information about a token's fitness for a particular use.
@@ -38,7 +38,7 @@ export const urls = {
 	},
 };
 
-const unauthenticatedUrls = [urls.auth.postJwtCreate, urls.auth.postJwtVerify];
+const unauthenticatedUrls = [urls.auth.postLogin, urls.auth.postVerify];
 
 const checkUrlsCache = {};
 

@@ -9,11 +9,11 @@ export function enableMock(axios, delayResponse = 1000) {
 		delayResponse,
 	});
 	const {
-		auth: { postJwtCreate },
+		auth: { postLogin },
 		user: { getUser },
 	} = urls;
 
-	mock.onPost(postJwtCreate.url).reply(config => {
+	mock.onPost(postLogin.url).reply(config => {
 		const { email, password } = JSON.parse(config.data);
 
 		const user = users.find(user => user.email === email && user.password === password);
@@ -24,9 +24,10 @@ export function enableMock(axios, delayResponse = 1000) {
 	mock.onGet(getUser.url).reply(async config => {
 		const data = await storage.load('root');
 
-		const user = users.find(({ jwt }) => jwt.token === data.session?.token?.token);
+		const user = users.find(({ jwt }) => jwt.token === data.session?.accessToken);
 		// eslint-disable-next-line no-unused-vars
 		const { jwt, ...rest } = user || {};
+
 		return [200, rest];
 	});
 }

@@ -4,11 +4,12 @@ import { MSTAddStaticMethods } from '../utils';
 
 const Account = types
 	.model('Account', {
-		id: types.identifier,
+		id: types.string,
 		email: types.string,
 		firstName: types.maybeNull(types.string),
 		lastName: types.maybeNull(types.string),
 		phone: types.maybeNull(types.string),
+		avatar: types.maybeNull(types.string),
 	})
 	.extend(withStatus)
 	.extend(withRootStore)
@@ -17,13 +18,23 @@ const Account = types
 
 // Attach static methods
 export default MSTAddStaticMethods(Account, {
-	fromResponseData: accountResponse => {
-		const { first_name: firstName, last_name: lastName, ...rest } = accountResponse.data;
+	fromResponseData: data => {
+		const {
+			id,
+			first_name: firstName,
+			last_name: lastName,
+			mobile_phone: phone,
+			avatar,
+			email,
+		} = data;
 
 		return {
+			id,
 			firstName,
 			lastName,
-			...rest,
+			phone: phone.number,
+			avatar,
+			email,
 		};
 	},
 	toRequestData: account => {

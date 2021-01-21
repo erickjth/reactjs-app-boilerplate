@@ -12,8 +12,8 @@ export class ApiClient extends BaseHttpClient {
 	 * @param email
 	 * @param password
 	 */
-	createJWT(email, password) {
-		return this.post(urls.auth.postJwtCreate.url, {
+	postLogin(email, password) {
+		return this.post(urls.auth.postLogin.url, {
 			email,
 			password,
 		});
@@ -24,8 +24,8 @@ export class ApiClient extends BaseHttpClient {
 	 *
 	 * @param token
 	 */
-	verifyJWT(token) {
-		return this.post(urls.auth.postJwtVerify.url, { token });
+	verifyLogin(token) {
+		return this.post(urls.auth.postVerify.url, { token });
 	}
 
 	/**
@@ -33,14 +33,5 @@ export class ApiClient extends BaseHttpClient {
 	 */
 	getUser() {
 		return this.get(urls.user.getUser.url);
-	}
-
-	/**
-	 * Patches (updates) the signed up user information
-	 */
-	patchUser(user) {
-		return this.patch(urls.user.patchUser.url, user, {
-			headers: {},
-		});
 	}
 }

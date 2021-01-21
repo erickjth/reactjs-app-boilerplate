@@ -8,7 +8,7 @@ export const RootStoreProvider = props => {
 
 	const rootStore = container.get('rootStore');
 
-	return <RootStoreContext.Provider value={rootStore} {...props} />;
+	return <RootStoreContext.Provider {...props} value={rootStore} />;
 };
 
 export const useStores = () => {

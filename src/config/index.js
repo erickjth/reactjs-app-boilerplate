@@ -1,5 +1,4 @@
 const config = {
-	applicationName: process.env.REACT_APP_MAIN_DOCUMENT_TITLE,
 	api: {
 		url: process.env.REACT_APP_API_URL,
 		timeout: process.env.REACT_APP_API_TIMEOUT,

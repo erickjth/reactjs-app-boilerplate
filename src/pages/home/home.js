@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from 'assets/images/logo.svg';
+import { LoginButton } from 'components/auth';
 
 export const HomePage = props => {
 	return (
@@ -9,6 +10,7 @@ export const HomePage = props => {
 				<p>
 					Edit <code>src/App.js</code> and save to reload.
 				</p>
+				<LoginButton />
 			</header>
 		</div>
 	);
