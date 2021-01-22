@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 
 // @TODO: Use proper theme provider
-const themeContext = React.createContext(null);
+const ThemeContext = React.createContext(null);
 
-const ThemeProvider = themeContext.Provider;
+const ThemeProvider = ({ theme, ...rest }) => <ThemeContext.Provider value={theme} {...rest} />;
 
 const useTheme = () => {
-	const theme = useContext(themeContext);
+	const theme = useContext(ThemeContext);
 
 	if (theme === null) {
 		throw new Error('Theme should be provided in ThemeProvider');
