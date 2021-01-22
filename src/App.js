@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState, useEffect } from 'react';
+import { useCallback, useRef, useState, useEffect } from 'react';
 import { configureServices, ServicesProvider } from 'services';
 import { RootStoreProvider } from 'stores';
 import { STATUSES } from 'constants/statuses';
