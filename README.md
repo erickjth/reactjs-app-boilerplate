@@ -6,18 +6,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The project's structure will look like this:
 
--   [assets](assets/README.md)
--   [components](components/README.md)
--   [config](config/README.md)
--   [constants](constants/README.md)
--   [hooks](hooks/README.md)
--   [i18n](i18n/README.md)
--   [navigation](navigation/README.md)
--   [pages](pages/README.md)
--   [services](services/README.md)
--   [stores](stores/README.md)
--   [theme](theme/README.md)
--   [utils](utils/README.md)
+-   [assets](src/assets/README.md)
+-   [components](src/components/README.md)
+-   [config](src/config/README.md)
+-   [constants](src/constants/README.md)
+-   [hooks](src/hooks/README.md)
+-   [i18n](src/i18n/README.md)
+-   [navigation](src/navigation/README.md)
+-   [pages](src/pages/README.md)
+-   [services](src/services/README.md)
+-   [stores](src/stores/README.md)
+-   [theme](src/theme/README.md)
+-   [utils](src/utils/README.md)
 -   app.js
 
 ## Libraries / Tools
@@ -67,7 +67,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-```
-
-```
