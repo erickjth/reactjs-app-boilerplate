@@ -1,0 +1,18 @@
+.Home-logo {
+	animation: Home-logo-spin infinite 20s linear;
+	height: 80px;
+}
+
+.Home-header {
+	background-color: #222;
+	height: 150px;
+	padding: 20px;
+	color: white;
+	text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.Home-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
